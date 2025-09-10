@@ -1,0 +1,5 @@
+{
+  "name": "Cinematic Booker",
+  "description": "Cinematic Booker is a React-based web application for browsing movies and booking tickets.",
+  "requestFramePermissions": []
+}

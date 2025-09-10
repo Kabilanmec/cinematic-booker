@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinematic Booker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-red': '#f84464',
+              'brand-yellow': '#f59e0b',
+              'brand-dark': '#1e1e1e',
+              'brand-bg': '#121212',
+              'brand-gray': '#e0e0e0',
+              'brand-light-gray': '#a0a0a0',
+            },
+            fontFamily: {
+              comic: ['"Luckiest Guy"', 'cursive'],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 0.5s ease-out forwards;
+      }
+
+      @keyframes slideInDown {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideOutUp {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-100%);
+        }
+      }
+      .animate-slideInDown { animation: slideInDown 0.3s ease-out forwards; }
+      .animate-slideOutUp { animation: slideOutUp 0.3s ease-in forwards; }
+
+      @keyframes price-update {
+        0% { background-color: transparent; }
+        50% { background-color: rgba(248, 68, 100, 0.3); }
+        100% { background-color: transparent; }
+      }
+      .animate-price-update {
+        animation: price-update 0.6s ease-out;
+      }
+      
+      /* For hiding scrollbar in carousel */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      /* Cover Flow Carousel Styles */
+      .cover-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+        padding: 1rem calc(50% - 6.5rem); /* 50% - (11rem/2) - 1rem */
+        perspective: 400px;
+      }
+      .cover-carousel-item {
+        flex: 0 0 11rem; /* w-44 */
+        margin: 0 1rem;
+        scroll-snap-align: center;
+        transition: transform 0.2s ease, filter 0.2s ease, z-index 0.2s;
+        transform: scale(0.85);
+        filter: brightness(0.6);
+        position: relative;
+        z-index: 1;
+      }
+      .cover-carousel-item.is-active {
+        transform: scale(1.05);
+        filter: brightness(1) drop-shadow(0 0 15px rgba(252, 211, 77, 0.8));
+        z-index: 10;
+      }
+
+      /* Text Shadow for Movie Titles on Posters */
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.8.2"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-bg">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
