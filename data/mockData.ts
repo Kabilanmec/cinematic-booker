@@ -1,10 +1,11 @@
+
 import type { Movie } from '../types';
 
 export const mockMovies: Movie[] = [
   {
     id: 8,
     title: "Lokah",
-    posterUrl: "https://i.postimg.cc/Qd9y7Y9v/lokah.jpg",
+    posterUrl: "https://i.postimg.cc/6y8cjQds/lok.jpg",
     genre: "Sci-Fi, Action, Thriller",
     duration: "2h 35m",
     rating: 8.8,
@@ -35,7 +36,7 @@ export const mockMovies: Movie[] = [
   {
     id: 9,
     title: "Madharaasi",
-    posterUrl: "https://i.postimg.cc/J0Z0gY7c/madharaasi.jpg",
+    posterUrl: "https://i.postimg.cc/grS4HhLq/mad.jpg",
     genre: "Action, Thriller",
     duration: "2h 20m",
     rating: 8.5,
@@ -65,7 +66,7 @@ export const mockMovies: Movie[] = [
   {
     id: 1,
     title: "Jana Nayagan",
-    posterUrl: "https://i.postimg.cc/8P7g3Zc8/jana-nayagan.jpg",
+    posterUrl: "https://i.postimg.cc/bs4TKjTZ/jn.jpg",
     genre: "Political, Thriller",
     duration: "2h 30m",
     rating: 8.2,
@@ -98,7 +99,7 @@ export const mockMovies: Movie[] = [
   {
     id: 6,
     title: "Sachin",
-    posterUrl: "https://i.postimg.cc/fbG04w8g/sachin.jpg",
+    posterUrl: "https://i.postimg.cc/R6Gd86sm/sac.jpg",
     genre: "Rom-Com",
     duration: "2h 19m",
     rating: 8.6,
@@ -128,7 +129,7 @@ export const mockMovies: Movie[] = [
   {
     id: 7,
     title: "Karuppu",
-    posterUrl: "https://i.postimg.cc/13y7xK1M/karuppu.jpg",
+    posterUrl: "https://i.postimg.cc/BP6pGSkK/ka.jpg",
     genre: "Drama, Thriller",
     duration: "2h 15m",
     rating: 8.8,
@@ -149,7 +150,7 @@ export const mockMovies: Movie[] = [
   {
     id: 4,
     title: "Spiderman Brand New Day",
-    posterUrl: "https://i.postimg.cc/qR0YyG4f/spiderman.jpg",
+    posterUrl: "https://i.postimg.cc/9Rc1JtB1/smbnd.webp",
     genre: "Action, Adventure, Sci-Fi",
     duration: "2h 28m",
     rating: 9.5,
@@ -160,7 +161,7 @@ export const mockMovies: Movie[] = [
   {
     id: 5,
     title: "Interstellar",
-    posterUrl: "https://i.postimg.cc/KzQxY5Yy/interstellar.jpg",
+    posterUrl: "https://i.postimg.cc/z3X0h7vG/int.jpg",
     genre: "Sci-Fi, Adventure, Drama",
     duration: "2h 49m",
     rating: 9.8,
