@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -14,6 +13,9 @@ const UserIcon = () => (
 const GiftIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4H5z" /></svg>
 );
+const ChartBarIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+);
 
 
 const NavItem: React.FC<{ to: string; icon: React.ReactNode; label: string }> = ({ to, icon, label }) => {
@@ -21,7 +23,7 @@ const NavItem: React.FC<{ to: string; icon: React.ReactNode; label: string }> = 
     const inactiveClass = "text-brand-light-gray";
 
     return (
-        <NavLink to={to} className={({ isActive }) => `${isActive ? activeClass : inactiveClass} flex flex-col items-center justify-center transition-colors duration-200`}>
+        <NavLink to={to} className={({ isActive }) => `${isActive ? activeClass : inactiveClass} flex flex-col items-center justify-center transition-colors duration-200 w-1/5`}>
             {icon}
             <span className="text-xs mt-1">{label}</span>
         </NavLink>
@@ -33,8 +35,9 @@ const BottomNav: React.FC = () => {
         <nav className="fixed bottom-0 left-0 right-0 h-16 bg-brand-dark border-t border-white/10 shadow-lg flex justify-around items-center z-50 max-w-lg mx-auto">
             <NavItem to="/home" icon={<HomeIcon />} label="Home" />
             <NavItem to="/bookings" icon={<TicketIcon />} label="Bookings" />
-            <NavItem to="/profile" icon={<UserIcon />} label="Profile" />
+            <NavItem to="/analytics" icon={<ChartBarIcon />} label="Analytics" />
             <NavItem to="/offers" icon={<GiftIcon />} label="Offers" />
+            <NavItem to="/profile" icon={<UserIcon />} label="Profile" />
         </nav>
     );
 };

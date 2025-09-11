@@ -7,6 +7,7 @@ import ConfirmationScreen from './screens/ConfirmationScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import BookingsScreen from './screens/BookingsScreen';
 import OffersScreen from './screens/OffersScreen';
+import AnalyticsScreen from './screens/AnalyticsScreen';
 import type { Booking } from './types';
 
 const App: React.FC = () => {
@@ -31,6 +32,7 @@ const App: React.FC = () => {
           <Route path="/bookings" element={<BookingsScreen bookings={bookings} />} />
           <Route path="/profile" element={<ProfileScreen />} />
           <Route path="/offers" element={<OffersScreen />} />
+          <Route path="/analytics" element={<AnalyticsScreen />} />
         </Routes>
       </HashRouter>
     </div>
