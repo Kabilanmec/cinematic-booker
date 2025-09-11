@@ -83,11 +83,6 @@ const AnalyticsScreen: React.FC = () => {
                 <h1 className="text-2xl font-bold text-brand-red">Movie Analytics</h1>
             </header>
             <div className="p-4 space-y-6 animate-fadeInUp">
-                {/* A comment explaining the backend role */}
-                <div className="text-xs text-center text-gray-500 bg-black/20 p-2 rounded-md">
-                    Note: In a real app, this data would be calculated on a server using Python, Pandas, and NumPy for powerful analysis.
-                </div>
-
                 <AnalyticsCard title="Genre Popularity">
                    <GenreChart data={sortedGenres} />
                 </AnalyticsCard>
